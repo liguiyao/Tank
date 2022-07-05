@@ -82,16 +82,16 @@ public class MyPanel extends JPanel implements KeyListener {
     public void keyPressed(KeyEvent e) {
 //        System.out.println(e.getKeyCode());
         if (e.getKeyCode() == KeyEvent.VK_W) {
-            direct = 0;
+            myTank.direct = 0;
             myTank.setY(myTank.getY()- myTank.speed);
         } else if (e.getKeyCode() == KeyEvent.VK_S) {
-            direct = 2;
+            myTank.direct = 2;
             myTank.setY(myTank.getY() + myTank.speed);
         } else if (e.getKeyCode() == KeyEvent.VK_A) {
-            direct = 3;
+            myTank.direct = 3;
             myTank.setX(myTank.getX() - myTank.speed);
         } else if (e.getKeyCode() == KeyEvent.VK_D) {
-            direct = 1;
+            myTank.direct = 1;
             myTank.setX(myTank.getX() + myTank.speed);
         }
         repaint();
