@@ -10,6 +10,8 @@ public class TankApplication extends JFrame {
 
     public TankApplication() {
         mp = new MyPanel();
+        Thread thread = new Thread(mp);
+        thread.start();
         this.add(mp);
         this.setSize(1000, 750);
         this.addKeyListener(mp);

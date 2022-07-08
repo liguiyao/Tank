@@ -3,18 +3,20 @@ package com.lgy.demo26;
 public class Tank {
     private int x;
     private int y;
+    private int direct;
+    boolean isLive = true;
 
     public void moveUp() {
-        x--;
-    }
-    public void moveDown() {
-        x++;
-    }
-    public void moveLeft() {
         y--;
     }
-    public void moveRight() {
+    public void moveDown() {
         y++;
+    }
+    public void moveLeft() {
+        x--;
+    }
+    public void moveRight() {
+        x++;
     }
 
     public Tank(int x,int y) {
@@ -38,5 +40,11 @@ public class Tank {
         this.y = y;
     }
 
+    public int getDirect() {
+        return direct;
+    }
 
+    public void setDirect(int direct) {
+        this.direct = direct;
+    }
 }
