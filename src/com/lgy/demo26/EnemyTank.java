@@ -7,6 +7,47 @@ public class EnemyTank extends Tank implements Runnable{
     boolean isLive = true;
     Vector<Shot> shots = new Vector<>();
 
+    Vector<EnemyTank> enemyTanks = new Vector<>();
+
+    public void setEnemyTanks(Vector<EnemyTank> enemyTanks) {
+        this.enemyTanks = enemyTanks;
+    }
+
+    public boolean isTouchEnemyTank() {
+        switch (this.getDirect()) {
+            case 0:
+                for (int i = 0; i < enemyTanks.size(); i++) {
+                    EnemyTank enemyTank = enemyTanks.get(i);
+                    if (enemyTank != this) {
+                        if (enemyTank.getDirect() == 0 || enemyTank.getDirect() == 2) {
+                            if (this.getX() >= enemyTank.getX()
+                                    && this.getX() <= enemyTank.getX() + 40
+                                    && this.getY() >= enemyTank.getY()
+                                    && this.getY() <= enemyTank.getY() + 60) {
+                                return true;
+                            }
+                            if (this.getX() + 40 >= enemyTank.getX()
+                                    && this.getX() + 40 <= enemyTank.getX() + 40
+                                    && this.getY() >= enemyTank.getY()
+                                    && this.getY() <= enemyTank.getY() + 60) {
+                            }
+                            return true;
+                        }
+                        }
+                        if (enemyTank.getDirect() == 1 || enemyTank.getDirect() == 3) {
+
+                        }
+                }
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+        }
+        return true;
+    }
 
     public EnemyTank(int x, int y) {
         super(x, y);
