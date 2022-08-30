@@ -1,4 +1,4 @@
-package com.lgy.DateStructure.SparseArray;
+package com.lgy.DataStructure.SparseArray;
 
 import java.util.Arrays;
 import java.util.Comparator;
